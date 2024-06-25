@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    
+   
+</head>
+<body>
+  <style>
+        
+    body{
+        background-image:linear-gradient(to top , #333 , #444);
+        height: 100vh;
+    }  
+
+</style>
+
+    <script type="text/javascript" src="myFunctions.js"></script> 
+
+
+    <nav class="nav" >
+      <ul>
+          <li><a href="home.html" >Home</a></li>
+          <li><a href="AboutUs.html">AboutUs</a></li>
+
+      </ul>
+  </nav>
+    
+    
+
+    <h2 class="TProperties">قائمة العقارات</h2>
+    <div >
+        
+        <table border="1" id="products" style="width: 100%;" >
+            <thead>
+             <th>المدينة</th>
+             <th>تفاصيل</th>
+             <th>الايجار الشهري</th>
+             <th>اظهار التفاصيل</th>
+             <th>اختيار</th>
+            </thead>
+            <tr>
+                <td>دمشق</td>
+                <td>شقة غرفة وصالة مساحة 70 م</td>
+                <td>500000 ل.س</td>
+                <td><input type="checkbox" class="b1" data-target="detailsWindow1" >إظهار </td>
+                <td><input type="radio" class="selectBtn" data-city="دمشق" data-details="شقة غرفة وصالة مساحة 70 م" data-price="500000 ل.س">اختيار</input></td>
+              </tr>
+              <tr class="extraDetailsRow">
+                <td colspan="5">
+                  <div class="propertyDetails" id="d1">
+                            <h2>تفاصيل الشقة في دمشق</h2>
+                    <h3>المنطقة: ركن الدين _ متوفر كراج _ الطابق الثالث</h3>
+                    <h3>الملكية: طابو _ بلكون مساحة 12م _ مفروشة</h3>
+                    <h2>
+                      <img src="images/1.jpg">
+                      <img src="images/2.jpg">
+                      <img src="images/3.jpg"></h2>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>دمشق</td>
+                <td>شقة مفروشة ثلاث غرف و صالون150م</td>
+                <td>350000 ل.س</td>
+                <td><input type="checkbox" class="b2" data-target="detailsWindow7">إظهار </td>
+                <td><input type="radio" class="selectBtn" data-city="دمشق" data-details="شقة مفروشة ثلاث غرف و صالون150م" data-price="350000 ل.س">اختيار</input></td>
+              </tr>
+              <tr class="extraDetailsRow">
+                <td colspan="5">
+                  <div class="propertyDetails" id="d2">
+                    <h2>تفاصيل الشقة في دمشق</h2>
+                    <h3>المنطقة: شارع النصر _ الطابق الخامس</h3>
+                    <h3>الملكية: طابو _ مفروشة</h3>
+                    <h2><img src="images/13.jpg">
+                      <img src="images/14.jpg"></h2>
+                  </div>
+                </td>
+              </tr>
+    <tr>
+        <td>حمص</td>
+        <td>دكان مساحة 50م</td>
+        <td>250000 ل.س</td>
+        <td><input type="checkbox" class="b3" data-target="detailsWindow2">إظهار </td>
+        <td><input type="radio" class="selectBtn" data-city="حمص" data-details="دكان مساحة 50م" data-price="250000 ل.س">اختيار</input></td>
+      </tr>
+      <tr class="extraDetailsRow">
+        <td colspan="5">
+          <div class="propertyDetails" id="d3">
+            <h2>تفاصيل المحل في حمص</h2>
+            <h3>المنطقة: شارع الحضارة _ الطابق الاول</h3>
+            <h3>الملكية: طابو</h3>
+            <h2><img src="images/4.jpeg"></h2>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>طرطوس</td>
+        <td>منزل ثلاث غرف مع حديقة350م</td>
+        <td>500000 ل.س</td>
+        <td><input type="checkbox" class="b4" data-target="detailsWindow4">إظهار </td>
+        <td><input type="radio" class="selectBtn" data-city="طرطوس" data-details="منزل ثلاث غرف مع حديقة350م" data-price="500000 ل.س">اختيار</input></td>
+      </tr>
+      <tr class="extraDetailsRow">
+        <td colspan="5">
+          <div class="propertyDetails" id="d4">
+            <h2>تفاصيل المنزل في طرطوس</h2>
+            <h3>المنطقة: الجمعية السكنية _ الطابق الرابع</h3>
+            <h3>الملكية: طابو _ يوجد ملعب ومسبح</h3>
+            <h2><img src="images/19.jpeg">
+              <img src="images/20.jpeg"></h2>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>حماة</td>
+        <td>مزرعة 5دنم مع مسبح	</td>
+        <td>1000000 ل.س</td>
+        <td><input type="checkbox" class="b5" data-target="d5">إظهار </td>
+        <td><input type="radio" class="selectBtn" data-city="حماة" data-details="مزرعة 5دنم مع مسبح" data-price="1000000 ل.س">اختيار</input></td>
+      </tr>
+      <tr class="extraDetailsRow">
+        <td colspan="5">
+          <div class="propertyDetails" id="d5">
+            <h2>تفاصيل المزرعة في حماة</h2>
+            <h3>المنطقة: شارع أبي الفداء طريق القلعة</h3>
+            <h3>الملكية: طابو _ مفروشة</h3>
+            <h2><img src="images/7.jpg">
+              <img src="images/8.jpeg"></h2>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <tr>
+            <td>حلب</td>
+            <td> منزل مفروش 100 م</td>
+            <td>600000 ل.س</td>
+            <td><input type="checkbox" class="b6" data-target="d6">إظهار </td>
+            <td><input type="radio" class="selectBtn" data-city="دمشق" data-details="شقة فارغة غرفتين وصالون" data-price="600000 ل.س">اختيار</input></td>
+          </tr>
+          <tr class="extraDetailsRow">
+            <td colspan="5">
+              <div class="propertyDetails" id="d6">
+                <h2>تفاصيل المنزل في حلب</h2>
+          <h3>المنطقة: 	الاكرمية على الشارع الرئيسي المسبح الاولمبي _ الطابق الرابع _ عدد الغرف: 3</h3>
+          <h3>الملكية: 	طابو أخضر- 2400 سهم</h3>
+          <h2><img src="images/4.jpeg">
+          <img src="images/5.jpeg"></h2>
+              </div>
+            </td>
+          </tr>
+    <tr>
+        <td>حماة</td>
+        <td>شقة فارغة اربعة غرف وصالونين200م</td>
+        <td>450000 ل.س</td>
+        <td><input type="checkbox" class="b7" data-target="d7">إظهار </td>
+        <td><input type="radio" class="selectBtn" data-city="حماة" data-details="شقة فارغة اربعة غرف وصالونين200م" data-price="450000 ل.س">اختيار</input></td>
+      </tr>
+      <tr class="extraDetailsRow">
+        <td colspan="5">
+          <div class="propertyDetails" id="d7">
+            <h2>تفاصيل الشقة في حماة</h2>
+            <h3>المنطقة: شارع البياض _ الطابق الثاني</h3>
+            <h3>الملكية: طابو _ غير مفروشة</h3>
+            <h2><img src="images/15.jpeg">
+              <img src="images/16.jpeg"></h2>
+          </div>
+        </td>
+      </tr>
+    <tr>
+        <td>دمشق</td>
+        <td>شقة غرفة وصالة مساحة 70 م</td>
+        <td>500000 ل.س</td>
+        <td><input type="checkbox" class="b8" data-target="d8">إظهار </td>
+        <td><input type="radio" class="selectBtn" data-city="دمشق" data-details="شقة غرفة وصالة مساحة 70 م" data-price="500000 ل.س">اختيار</input></td>
+      </tr>
+      <tr class="extraDetailsRow">
+        <td colspan="5">
+          <div class="propertyDetails" id="d8">
+                    <h2>تفاصيل الشقة في دمشق</h2>
+            <h3>المنطقة: ركن الدين _ متوفر كراج _ الطابق الثالث</h3>
+            <h3>الملكية: طابو _ بلكون مساحة 12م _ مفروشة</h3>
+            <h2>
+              <img src="images/1.jpg">
+              <img src="images/2.jpg">
+              <img src="images/3.jpg"></h2>
+          </div>
+        </td>
+      </tr>
+    <tr>
+        <td>دمشق</td>
+        <td>فيلا 400م مسبح و8غرف</td>
+        <td>1500000 ل.س</td>
+        <td><input type="checkbox" class="b9" data-target="d9">إظهار </td>
+        <td><input type="radio" class="selectBtn" data-city="دمشق" data-details="فيلا 400م مسبح و8غرف" data-price="1500000 ل.س">اختيار</input></td>
+      </tr>
+      <tr class="extraDetailsRow">
+        <td colspan="5">
+          <div class="propertyDetails" id="d9">
+            <h2>تفاصيل الفيلا في دمشق</h2>
+            <h3>المنطقة: شارع بغداد</h3>
+            <h3>الملكية: طابو _ مفروشة </h3>
+            <h2><img src="images/11.jpg">
+              <img src="images/12.jpg"></h2>
+          </div>
+        </td>
+      </tr>
+        <tr>
+          <td>طرطوس</td>
+          <td> محل طابقين 110م</td>
+          <td>850000 ل.س</td>
+          <td><input type="checkbox" class="b10" data-target="d10">إظهار </td>
+          <td><input type="radio" class="selectBtn" data-city="طرطوس" data-details="محل طابقين 110م" data-price="850000 ل.س">اختيار</input></td>
+        </tr>
+        <tr class="extraDetailsRow">
+          <td colspan="5">
+            <div class="propertyDetails" id="d10">
+              <h2>تفاصيل المحل في طرطوس</h2>
+              <h3>المنطقة: شارع الوحدة _ الطابق الثاني</h3>
+              <h3>الملكية: طابو _ اكساء جديد</h3>
+              <h2><img src="images/9.jpg">
+                <img src="images/10.jpg"></h2>
+            </div>
+          </td>
+        </tr>
+        </table>
+    </div>
+    
+    <button class="btn_End" type="button"  onclick="showLoginForm()">
+        متابعة
+        </button>
+     <div class="form" id="login-form" style="display:none;">
+        <h2 class="TProperties">تسجيل الدخول</h2>
+            <form action="#" onsubmit="return validateForm()">
+              <label for="">الأسم</label>
+                <input id="myUsername" placeholder="الأسم" >
+                <label for="">الرقم الوطني</label>
+                <input  id="number_s"  placeholder="الرقم الوطني" maxlength="11" minlength="11" required>
+                <label for="">تاريخ الولادة </label>
+                <input type="date" placeholder="تاريخ الولادة ">
+                <label for="">رقم الموبايل</label>
+                <input id="phonenumber" type="tel"  placeholder="رقم الموبايل" maxlength="10" minlength="10" pattern="((0)(93|94|95|96|98|99)([0-9]{7}))|((0)(92|95|96|97)([0-9]{7}))">
+                <label for="">الايميل</label>
+                <input  id="email" type="email" placeholder="الأيميل">
+                <label for="">Captcha</label>
+                <input type="text" id="txtCaptcha">
+                <label for=""></label>
+                <input type="text" id="txtCompare" >
+                <input type="button" class="refreash" id="btnrefresh" name="captcha" value="تحديث" onclick="Captcha();"/>
+                <button  id="purchaseButton" onclick="validateForm()">ارسال</button>
+        </form>
+    </div>
+    <script>
+      $(document).ready(function(){
+   $('.b1').click(function(){
+     $('#d1').slideToggle()
+   })
+   $('.b2').click(function(){
+     $('#d2').slideToggle()
+   })
+   $('.b3').click(function(){
+     $('#d3').slideToggle()
+   })
+   $('.b4').click(function(){
+     $('#d4').slideToggle()
+   })
+   $('.b5').click(function(){
+     $('#d5').slideToggle()
+   })
+   $('.b6').click(function(){
+     $('#d6').slideToggle()
+   })
+   $('.b7').click(function(){
+     $('#d7').slideToggle()
+   })
+   $('.b8').click(function(){
+     $('#d8').slideToggle()
+   })
+   $('.b9').click(function(){
+     $('#d9').slideToggle()
+   })
+   $('.b10').click(function(){
+     $('#d10').slideToggle()
+   })
+ 
+
+   $('.btn_End').click(function(){
+     $('.form').fadeIn(2000)
+   })
+
+ 
+   })
+ </script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="myFunctions.js"></script> 
+</body>
+</html>
